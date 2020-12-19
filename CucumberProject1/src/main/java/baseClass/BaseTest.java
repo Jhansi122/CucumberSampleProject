@@ -14,7 +14,7 @@ public class BaseTest {
 	public BaseTest() {
       
 		try {
-			File src = new File ("C:\\Program Files\\Selenium\\Spring tool suite\\Code\\CucumberProject1\\ObjectRepository\\Application.Properties");
+			File src = new File ("src/main/resources/objectRepository");
 			  FileInputStream fis = new FileInputStream(src);
 			  pro= new Properties();
 			  pro.load(fis);
