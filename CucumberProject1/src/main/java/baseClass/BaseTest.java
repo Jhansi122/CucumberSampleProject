@@ -14,7 +14,7 @@ public class BaseTest {
 	public BaseTest() {
       
 		try {
-			File src = new File ("src/main/resources/objectRepository");
+			File src = new File ("src/main/resources/objectRepository/application.properties");
 			  FileInputStream fis = new FileInputStream(src);
 			  pro= new Properties();
 			  pro.load(fis);
@@ -27,24 +27,13 @@ public class BaseTest {
 	} 
       
 	public  String initialization() {
-		/*String browser = pro.getProperty("FirefoxDriver");
-		if(browser.equals("FirefoxDriver"))
-		{
-			System.setProperty("webdriver.gecko.driver", "C://Program Files//Selenium//Geckodriver//geckodriver.exe");
-			driver= new FirefoxDriver();
-		}
-		else if(browser.equals("ChromeDriver"))
-			System.setProperty("webdriver.chrome.driver", "C://Program Files//Selenium//Drivers//chromedriver.exe");
-		    driver= new ChromeDriver();
-		    
-			
-		*/
+		
 		String browser=pro.getProperty("FirefoxDriver");
 		return browser;
 	}
-	public String URL()
+	public String URLlink()
 	{
-		String Url=pro.getProperty("URL");
+		String Url=pro.getProperty("url");
 		return Url;
 				
 	}

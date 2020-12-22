@@ -6,8 +6,14 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features="C:\\Program Files\\Selenium\\Spring tool suite\\Code\\CucumberProject1\\src\\main\\java\\Feature Files\\Application.feature", glue= {"stepDefinition"})
+@CucumberOptions(features="src/main/resources/objectRepository/application.properties", glue= {"testRunner"},
+plugin = {  "pretty",
+"html:target/cucumber-reports/reports" },
+
+ publish = true)
+
 public class RunnerTest 
+
 {
 	
 	

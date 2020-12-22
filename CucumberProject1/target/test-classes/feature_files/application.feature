@@ -8,5 +8,5 @@ Then user should not be able to login to the application.
 Examples:
 |Username|Password |
 |Jhansi123@mail.com |1234|
-|abc123@mail.com  |456abc|
+
 
