@@ -37,7 +37,25 @@ public class BaseTest {
 		return Url;
 				
 	}
-		
+	public String Login()
+	{
+		String loginXpath = pro.getProperty("LoginButton");
+		return loginXpath;
+	}
+	public String UserN()
+	{
+		String Uname= pro.getProperty("UserName");
+		return Uname;
+	}
+		public String pass()
+		{
+			String Passw = pro.getProperty("Password");
+			return Passw;
+		}
+		public String click() {
+			String loginClick = pro.getProperty("LoginClick");
+			return loginClick;
+		}
 	}
 
 	

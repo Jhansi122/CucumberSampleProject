@@ -5,13 +5,41 @@
 	<groupId>CucumberProject1</groupId>
 	<artifactId>CucumberProject1</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	
- <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.target>1.8</maven.compiler.target>
-    </properties>
 
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+	
 	<dependencies>
+	<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports-cucumber4-adapter</artifactId>
+			<version>1.2.1</version>
+			
+			<exclusions>
+		<exclusion>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-java</artifactId>
+		</exclusion>
+	</exclusions>
+        <scope>test</scope>
+		</dependency>
+		
+
+	<dependency>
+        <groupId>com.aventstack</groupId>
+        <artifactId>extentreports-cucumber4-adapter</artifactId>
+        <version>1.0.11</version>
+        <scope>test</scope>
+</dependency>
+		<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>5.0.0</version>
+		</dependency>
+
+
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-java</artifactId>
@@ -78,7 +106,7 @@
 					<sorce>1.8</sorce>
 					<target>1.8</target>
 				</configuration>
-				</plugin>
+			</plugin>
 			<plugin>
 				<groupId>net.masterthought</groupId>
 				<artifactId>maven-cucumber-reporting</artifactId>
@@ -92,12 +120,33 @@
 						</goals>
 						<configuration>
 							<projectName>CucumberProject1</projectName>
-							<outputDirectory>${project.build.directory}/cucumber-report-html</outputDirectory>
-							<cucumberOutput>${project.build.directory}/cucumber.json</cucumberOutput>
+							<outputDirectory>${project.build.directory}/cucumber.json</outputDirectory>
+							<cucumberOutput>${project.build.directory}/cucumber.html</cucumberOutput>
+							<inputDirectory>${project.build.directory}/jsonReports</inputDirectory>
+
+							<jsonFiles>
+								<!-- supports wildcard or name pattern -->
+								<param>**/*.json</param>
+							</jsonFiles>
+							<!-- optional, defaults to outputDirectory if not specified -->
+							<classificationDirectory>${project.build.directory}/classifications</classificationDirectory>
+							<classificationFiles>
+								<!-- supports wildcard or name pattern -->
+								<param>sample.properties</param>
+								<param>other.properties</param>
+							</classificationFiles>
+							<parallelTesting>false</parallelTesting>
+
+							<mergeFeaturesById>false</mergeFeaturesById>
+
+							<mergeFeaturesWithRetest>false</mergeFeaturesWithRetest>
+
+							<checkBuildResult>false</checkBuildResult>
 						</configuration>
 					</execution>
+
 				</executions>
 			</plugin>
-        </plugins>
-    </build>
+		</plugins>
+	</build>
 </project>

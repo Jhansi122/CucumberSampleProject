@@ -6,9 +6,11 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features="src/main/resources/objectRepository/application.properties", glue= {"testRunner"},
-plugin = {  "pretty",
-"html:target/cucumber-reports/reports" },
+@CucumberOptions(features="src/test/resources/feature_files/application.feature", 
+glue= {"testRunner"},
+monochrome =true,plugin = {  "pretty",
+"html:target/cucumber-html-report","json:target/cucumber.json",
+},
 
  publish = true)
 
