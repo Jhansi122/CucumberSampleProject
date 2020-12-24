@@ -28,7 +28,7 @@ public class BaseTest {
       
 	public  String initialization() {
 		
-		String browser=pro.getProperty("FirefoxDriver");
+		String browser=pro.getProperty("ChromeDriver");
 		return browser;
 	}
 	public String URLlink()
@@ -56,7 +56,18 @@ public class BaseTest {
 			String loginClick = pro.getProperty("LoginClick");
 			return loginClick;
 		}
+		public String Dialouge()
+		{
+			String box =pro.getProperty("Dialougebox");
+			return box;
+		}
+		public String disagreeButton()
+		{
+			String button =pro.getProperty("Disagreebutton");
+			return button;
+		}
 	}
+
 
 	
 		

@@ -1,0 +1,254 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2020-12-24T13:39:40.799Z",
+        "line": 11,
+        "name": "Test login page with different login credentials",
+        "description": "",
+        "id": "login-page-test;test-login-page-with-different-login-credentials;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 23356000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user navigates to designmodo.com",
+            "match": {
+              "location": "testRunner.RunnerstepTest.open_firefox_and_navigate_to_whitehatsec_com()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"*[name\u003d\u0027username\u0027]\"}\n  (Session info: chrome\u003d87.0.4280.88)\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.14.0\u0027, revision: \u0027aacccce0\u0027, time: \u00272018-08-02T20:19:58.91Z\u0027\nSystem info: host: \u0027JHANSI-PC\u0027, ip: \u0027192.168.1.4\u0027, os.name: \u0027Windows 7\u0027, os.arch: \u0027x86\u0027, os.version: \u00276.1\u0027, java.version: \u00271.8.0_151\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\\Users\\JHANSI\\AppData\\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:63906}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: bb0f6e7c4f01c680026e831ead9f94e9\n*** Element info: {Using\u003dname, value\u003dusername}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:400)\r\n\tat org.openqa.selenium.By$ByName.findElement(By.java:284)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)\r\n\tat testRunner.RunnerstepTest.user_provides_valid_username_and_pass(RunnerstepTest.java:53)\r\n\tat ✽.user provides valid Jhansi123@mail.com and 1234(file:///C:/Users/JHANSI/git/repository3/CucumberProject1/src/test/resources/feature_files/application.feature:5)\r\n",
+              "duration": 5082000000,
+              "status": "failed"
+            },
+            "line": 5,
+            "name": "user provides valid Jhansi123@mail.com and 1234",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Jhansi123@mail.com",
+                  "offset": 20
+                },
+                {
+                  "val": "1234",
+                  "offset": 43
+                }
+              ],
+              "location": "testRunner.RunnerstepTest.user_provides_valid_username_and_pass(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "skipped"
+            },
+            "line": 6,
+            "name": "user should be able to login successfully.",
+            "match": {
+              "location": "testRunner.RunnerstepTest.user_should_be_able_to_login_successfully()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "user provides invalid Jhansi123@mail.com and 1234.",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1234",
+                  "offset": 45
+                }
+              ],
+              "location": "testRunner.RunnerstepTest.user_provides_invalid_jhansi123_mail_com_and(java.lang.Integer)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "user should not be able to login to the application.",
+            "match": {
+              "location": "testRunner.RunnerstepTest.user_should_not_be_able_to_login_to_the_application()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@somke"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-12-24T13:40:09.437Z",
+        "line": 12,
+        "name": "Test login page with different login credentials",
+        "description": "",
+        "id": "login-page-test;test-login-page-with-different-login-credentials;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 20829000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user navigates to designmodo.com",
+            "match": {
+              "location": "testRunner.RunnerstepTest.open_firefox_and_navigate_to_whitehatsec_com()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"*[name\u003d\u0027username\u0027]\"}\n  (Session info: chrome\u003d87.0.4280.88)\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.14.0\u0027, revision: \u0027aacccce0\u0027, time: \u00272018-08-02T20:19:58.91Z\u0027\nSystem info: host: \u0027JHANSI-PC\u0027, ip: \u0027192.168.1.4\u0027, os.name: \u0027Windows 7\u0027, os.arch: \u0027x86\u0027, os.version: \u00276.1\u0027, java.version: \u00271.8.0_151\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\\Users\\JHANSI\\AppData\\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:63992}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: ed3b8c44a78a7056b7020a825c0e2c68\n*** Element info: {Using\u003dname, value\u003dusername}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:400)\r\n\tat org.openqa.selenium.By$ByName.findElement(By.java:284)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)\r\n\tat testRunner.RunnerstepTest.user_provides_valid_username_and_pass(RunnerstepTest.java:53)\r\n\tat ✽.user provides valid user456@mail.com and 1bc123(file:///C:/Users/JHANSI/git/repository3/CucumberProject1/src/test/resources/feature_files/application.feature:5)\r\n",
+              "duration": 5025000000,
+              "status": "failed"
+            },
+            "line": 5,
+            "name": "user provides valid user456@mail.com and 1bc123",
+            "match": {
+              "arguments": [
+                {
+                  "val": "user456@mail.com",
+                  "offset": 20
+                },
+                {
+                  "val": "1bc123",
+                  "offset": 41
+                }
+              ],
+              "location": "testRunner.RunnerstepTest.user_provides_valid_username_and_pass(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "skipped"
+            },
+            "line": 6,
+            "name": "user should be able to login successfully.",
+            "match": {
+              "location": "testRunner.RunnerstepTest.user_should_be_able_to_login_successfully()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "user provides invalid user456@mail.com and 1bc123.",
+            "match": {
+              "location": "testRunner.RunnerstepTest.user_provides_invalid_user456_mail_com_and_1bc123()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "user should not be able to login to the application.",
+            "match": {
+              "location": "testRunner.RunnerstepTest.user_should_not_be_able_to_login_to_the_application()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@somke"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-12-24T13:40:35.304Z",
+        "line": 15,
+        "name": "Adding the products to the cart and verifying",
+        "description": "",
+        "id": "login-page-test;adding-the-products-to-the-cart-and-verifying",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "user navigates back to the home page",
+            "match": {
+              "location": "testRunner.RunnerstepTest.user_navigates_back_to_the_home_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "selects the slides product from the view",
+            "match": {
+              "location": "testRunner.RunnerstepTest.selects_the_slides_product_from_the_view()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "user adds the product to the cart",
+            "match": {
+              "location": "testRunner.RunnerstepTest.user_adds_the_product_to_the_cart()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@somke"
+          },
+          {
+            "name": "@regression"
+          }
+        ]
+      }
+    ],
+    "name": "Login page test",
+    "description": "",
+    "id": "login-page-test",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/feature_files/application.feature",
+    "tags": [
+      {
+        "name": "@somke",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
