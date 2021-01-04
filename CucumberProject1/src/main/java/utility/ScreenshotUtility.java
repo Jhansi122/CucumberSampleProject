@@ -8,7 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.io.FileHandler;
 
 public class ScreenshotUtility {
-	public static void Screenshot(WebDriver driver, String ScreenshotName) {
+	public static String Screenshot(WebDriver driver, String ScreenshotName) {
       try {
 		TakesScreenshot ts = (TakesScreenshot)driver;
 		  File src = ts.getScreenshotAs(OutputType.FILE);
@@ -18,6 +18,7 @@ public class ScreenshotUtility {
 		System.out.println(e.getMessage());
 		e.printStackTrace();
 	}
+	return ScreenshotName;
       
 	}
 }
