@@ -1,4 +1,4 @@
-@somke
+@smoke
 Feature: Login page test
 Scenario Outline: Test login page with different login credentials
 Given user navigates to designmodo.com

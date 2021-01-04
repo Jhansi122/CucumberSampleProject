@@ -1,21 +1,19 @@
 package testRunner;
 
-import java.io.IOException;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
-import org.junit.Before;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
+import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
 import baseClass.BaseTest;
@@ -33,33 +31,48 @@ public class RunnerstepTest extends BaseTest {
 	 
 	//private Scenario scenario;
 	
-	@Before
-	public void setup()
-	{
-	    ExtentHtmlReporter reporter=new ExtentHtmlReporter
-	    		("src/main/resources/extent_reports/cucumber_extentReport.html");
-		
-	    extent = new ExtentReports();
-	    
-	    extent.attachReporter(reporter);
-	    
-	    logger=extent.createTest("LoginTest");
-	}
-	@AfterMethod
-	public void tearDown(ITestResult result) throws IOException
+	
+	
+		/*@Test
+		public void loginTest() throws Exception
+		{    
+	            
+		    ExtentHtmlReporter reporter=new ExtentHtmlReporter
+		    		("src/main/resources/extent_reports/cucumber_extentReport.html");
+			
+	           
+		    ExtentReports extent = new ExtentReports();
+		    
+	            
+		    extent.attachReporter(reporter);
+		    
+	        
+		    ExtentTest logger=extent.createTest("^user navigates to designmodo.com$");
+		    
+	       
+		    logger.log(Status.INFO, "^user navigates to designmodo.com$");
+		   
+		    //logger.log(Status.PASS, "Title verified");
+		   
+	              
+		    extent.flush();
+			
+		}
+	@Test
+	public void tearDown(ITestResult result) throws Exception
 	{
 		
 		if(result.getStatus()==ITestResult.FAILURE)
 		{
 			
-			String temp=ScreenshotUtility.Screenshot(driver, "homepage");
+			String temp=ScreenshotUtility.Screenshot(driver, "Homepage");
 			logger.fail(result.getThrowable().getMessage(), MediaEntityBuilder.createScreenCaptureFromPath(temp).build());
 		}
 		
 		extent.flush();
 		driver.quit();
 		
-	}
+	}*/
 
 				
 	
