@@ -1,0 +1,74 @@
+
+@smoke
+Scenario Outline: Test login page with different login credentials # src/test/resources/feature_files/application.feature:11
+  Given user navigates to designmodo.com                           # testRunner.RunnerstepTest.open_firefox_and_navigate_to_whitehatsec_com()
+  When user provides valid Jhansi123@mail.com and 1234             # testRunner.RunnerstepTest.user_provides_valid_username_and_pass(java.lang.String,java.lang.String)
+      org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='username']"}
+  (Session info: chrome=87.0.4280.88)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'JHANSI-PC', ip: '192.168.1.6', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\JHANSI\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:58100}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 03abb86cd424d3657faa7848dec32e41
+*** Element info: {Using=name, value=username}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:400)
+	at org.openqa.selenium.By$ByName.findElement(By.java:284)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at testRunner.RunnerstepTest.user_provides_valid_username_and_pass(RunnerstepTest.java:108)
+	at ✽.user provides valid Jhansi123@mail.com and 1234(file:///C:/Users/JHANSI/git/repository3/CucumberProject1/src/test/resources/feature_files/application.feature:5)
+
+  Then user should be able to login successfully.                  # testRunner.RunnerstepTest.user_should_be_able_to_login_successfully()
+  When user provides invalid Jhansi123@mail.com and 1234.          # testRunner.RunnerstepTest.user_provides_invalid_jhansi123_mail_com_and(java.lang.Integer)
+  Then user should not be able to login to the application.        # testRunner.RunnerstepTest.user_should_not_be_able_to_login_to_the_application()
+
+@smoke
+Scenario Outline: Test login page with different login credentials # src/test/resources/feature_files/application.feature:12
+  Given user navigates to designmodo.com                           # testRunner.RunnerstepTest.open_firefox_and_navigate_to_whitehatsec_com()
+  When user provides valid user456@mail.com and 1bc123             # testRunner.RunnerstepTest.user_provides_valid_username_and_pass(java.lang.String,java.lang.String)
+      org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='username']"}
+  (Session info: chrome=87.0.4280.88)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'JHANSI-PC', ip: '192.168.1.6', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\JHANSI\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:58188}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: e5fddbd2dc2a3be47082b65bf9a5ba20
+*** Element info: {Using=name, value=username}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:400)
+	at org.openqa.selenium.By$ByName.findElement(By.java:284)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at testRunner.RunnerstepTest.user_provides_valid_username_and_pass(RunnerstepTest.java:108)
+	at ✽.user provides valid user456@mail.com and 1bc123(file:///C:/Users/JHANSI/git/repository3/CucumberProject1/src/test/resources/feature_files/application.feature:5)
+
+  Then user should be able to login successfully.                  # testRunner.RunnerstepTest.user_should_be_able_to_login_successfully()
+  When user provides invalid user456@mail.com and 1bc123.          # testRunner.RunnerstepTest.user_provides_invalid_user456_mail_com_and_1bc123()
+  Then user should not be able to login to the application.        # testRunner.RunnerstepTest.user_should_not_be_able_to_login_to_the_application()
+
+@smoke @regression
+Scenario: Adding the products to the cart and verifying # src/test/resources/feature_files/application.feature:15
+  Given user navigates back to the home page            # testRunner.RunnerstepTest.user_navigates_back_to_the_home_page()
+  Then selects the slides product from the view         # testRunner.RunnerstepTest.selects_the_slides_product_from_the_view()
+  Then user adds the product to the cart                # testRunner.RunnerstepTest.user_adds_the_product_to_the_cart()
